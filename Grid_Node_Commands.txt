@@ -1,0 +1,10 @@
+When setting chromedriver path:
+java -jar selenium-server-standalone-2.53.0.jar -role webdriver -nodeConfig config2.json -Dwebdriver.chrome.driver=/Users/pranathb/Downloads/chromedriver
+
+
+Starting Selenium Grid:
+java -jar selenium-server-standalone-2.53.0.jar -port 4444 -role hub -nodeTimeout 600
+
+Selenium Node Registering:
+java -jar selenium-server-standalone-2.53.0.jar -role webdriver -hub http://localhost:4444/grid/register -port 8787 -browser "browserName=internet explorer,version=8,maxinstance=1"
+

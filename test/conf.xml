@@ -1,0 +1,31 @@
+<!--<!DOCTYPE suite SYSTEM http://testng.org/testng-1.0.dtd>-->
+<suite name="Parallel Tests" verbose="1" thread-count="4" parallel="tests">
+            <tests>
+                <test name="Mac+Firefox Test">
+                    <parameters>
+                        <parameter name="platform" value="Mac" />
+                        <parameter name="browser" value="Firefox" />
+                        <parameter name="version" value="9.0.1" />
+                        <parameter name="url" value="http://dl.dropbox.com/u/55228056/bmicalculator.html"/>
+                        <parameter name="nodeURL" value="http://192.168.2.2:5555/wd/hub"/>
+                        <!--Replace the above ip with the node ip address-->
+                    </parameters>
+                    <classes>
+                        <class name="SeleniumGridTest" />
+                    </classes>
+                </test>
+                <test name="Mac+Chrome Test">
+                    <parameters>
+                        <parameter name="platform" value="Mac" />
+                        <parameter name="browser" value="Chrome" />
+                        <parameter name="version" value="9.0.1" />
+                        <parameter name="url" value="http://dl.dropbox.com/u/55228056/bmicalculator.html"/>
+                        <parameter name="nodeURL" value="http://192.168.2.2:5555/wd/hub"/>
+                        <!--Replace the above ip with the node ip address-->
+                    </parameters>
+                    <classes>
+                        <class name="SeleniumGridTest" />
+                    </classes>
+                </test>
+            </tests>
+</suite>
